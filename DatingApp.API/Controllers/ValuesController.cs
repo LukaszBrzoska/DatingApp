@@ -20,8 +20,7 @@ namespace test.API.Controllers
             _context = context;
 
         }
-        // GET api/values
-        // [AllowAnonymous]
+        // GET api/values        
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
@@ -30,8 +29,7 @@ namespace test.API.Controllers
             return Ok(values);
         }
 
-        // GET api/values/5
-        // [AllowAnonymous]
+        // GET api/values/5        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {
