@@ -67,5 +67,8 @@ export class RegisterComponent implements OnInit {
   cancel() {
     this.cancelRegister.emit(false);
   }
+  loggedIn() {
+    return this.authService.loggedIn();
+  }
 
 }

@@ -1,7 +1,7 @@
 <div class="cord">
   <div class="card-body">
     <div *ngIf="messages?.length === 0">
-      <p>No messages yet... say hi my using the message box below</p>
+      <p>Brak wiadomości... Przywitaj się!</p>
     </div>
 
     <ul class="chat">
@@ -53,7 +53,7 @@
         class="form-control input-sm"
         placeholder="send a private message">
         <div class="input-group-append">
-          <button class="btn btn-primary" [disabled]="!messageForm.valid">Send</button>
+          <button class="btn btn-primary" [disabled]="!messageForm.valid">Wyślij</button>
         </div>
       </div>
     </form>

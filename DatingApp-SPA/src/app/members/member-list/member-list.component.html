@@ -6,17 +6,17 @@
 
   <form class="form-inline" #form="ngForm" (ngSubmit)="loadUsers()" novalidate>
     <div class="form-group">
-      <label for="minAge">Age From</label>
+      <label for="minAge">Wiek Od: </label>
       <input type="number" class="form-control ml-1" style="width: 70px" id="minAge" 
       [(ngModel)]="userParams.minAge" name="minAge">
     </div>
     <div class="form-group px-2">
-      <label for="maxAge">Age To</label>
+      <label for="maxAge">Do: </label>
       <input type="number" class="form-control ml-1" style="width: 70px" id="maxAge"
       [(ngModel)]="userParams.maxAge" name="maxAge">
     </div>
     <div class="form-group px-2">
-      <label for="gender">Show</label>
+      <label for="gender">Płeć</label>
       <select name="gender" id="gender" class="form-control ml-1" style="width: 130px" 
       [(ngModel)]="userParams.gender">
         <option *ngFor="let gender of genderList" [value]="gender.value">
@@ -24,13 +24,13 @@
         </option>
       </select>
     </div>
-    <button type="submit" class="btn btn-m btn-primary" style="margin-left: 10px">Find</button>
+    <button type="submit" class="btn btn-m btn-primary" style="margin-left: 10px">Wyszukaj</button>
     <button type="button" class="btn btn-m btn-info" (click)="resetFilters()" style="margin-left:10px">Reset</button>
 
     <div class="col">
       <div class="btn-group float-right">
-       <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" (click)="loadUsers()" btnRadio="lastActive">Last Active</button>
-       <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" (click)="loadUsers()" btnRadio="created">Newest Members</button>
+       <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" (click)="loadUsers()" btnRadio="lastActive">Ostatnio aktywni</button>
+       <button type="button" name="orderBy" class="btn btn-primary" [(ngModel)]="userParams.orderBy" (click)="loadUsers()" btnRadio="created">Nowi użytkownicy</button>
       </div>
     </div>
   </form>

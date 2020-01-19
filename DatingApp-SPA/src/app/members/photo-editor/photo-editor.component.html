@@ -5,7 +5,7 @@
       <button type="button" class="btn btn-sm mr-1"
         (click)="setMainPhoto(photo)" 
         [ngClass]="photo.isMain ? 'btn btn-success active' : 'btn btn-secondary'"
-        [disabled]="photo.isMain">Main</button>
+        [disabled]="photo.isMain">Główne</button>
       <button type="button" class="btn btn-sm btn-danger"
         (click)="deletePhoto(photo.id)"
         [disabled]="photo.isMain"><i class="fa fa-trash-o"></i></button>
@@ -17,7 +17,7 @@
  
   <div class="col-md-4">
 
-      <h3>Add Photos</h3>
+      <h3>Dodaj Zdjęcie</h3>
 
       <div ng2FileDrop
            [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
@@ -25,13 +25,13 @@
            [uploader]="uploader"
            class="cart bg-faded p-3 text-center mb-3 my-drop-zone">
            <i class="fa fa-upload fa-3x"></i>
-          Drop Photos here
+          Wstaw zdjęcie tutaj
       </div>
 
-      Multiple
+      Wiele:
       <input type="file" ng2FileSelect [uploader]="uploader" multiple  /><br/>
 
-      Single
+      Pojedyńcze:
       <input type="file" ng2FileSelect [uploader]="uploader" />
   </div>
 
